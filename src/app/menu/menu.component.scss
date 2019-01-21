@@ -34,15 +34,16 @@
 
 .box {
 	display: flex;
-    justify-content: space-between;
+	justify-content: space-between;
+	.box1, .box2, .box3 {
+		line-height: 5vw;
+		font-size: 1.4vw;
+		font-family: 'Montserrat', sans-serif;
+		color: white;
+		font-weight: bold;
+	}
 }
-.box1, .box2, .box3 {
-	line-height: 5vw;
-	font-size: 1.4vw;
-	font-family: 'Montserrat', sans-serif;
-	color: white;
-	font-weight: bold;
-}
+
 
 sup {
 	vertical-align: super;
@@ -51,7 +52,9 @@ sup {
 	margin-left: 0.4vw;
 }
 /* Color schemes */
-
+.main.main--navigation {
+    background: none;
+  }
 
 .navigation {
 	--color-text: #fbd54a;
@@ -62,7 +65,7 @@ sup {
 	--color-main-bg: #24262d;
 	--path-fill-1: #000000;
 	--path-fill-2: #1d1d1f;
-	--path-fill-3: #0E1529;
+	--path-fill-3: #0E1529;	
 	--color-title: #fff;
 	--font-family-title: 'Arapey', serif;
 	--font-size-title: 5vmax;
@@ -75,28 +78,26 @@ sup {
 	--button-bg: #fff;
 	--button-circle: #ada4a4;
 	--button-line: #222;
-	--color-home:#F08064;
-	--color-capabilities:#03A6B4;
-	--color-projects:#FE294D;
-	--color-team:#242B71;
+	--color-capabilities:#F08064;
+	--color-projects:#03A6B4;
+	--color-team:#FE294D;
+	--color-medias:#242B71;
 	--color-connect:#FFD93E;
 }
 .global-menu__wrap{
-	/* line-height: 6.5vw; */
 	text-align: right;
-	/* margin-left: 25vw; */
-	width: 37vw;
+    width: 37vw;
     height: 51vw;
-    margin-right: 0vw;
-	margin-top: 19vw;
-	margin-left: -18vw;
+    margin-right: 17vw;
+    margin-top: 10vw;
+    margin-left: -27vw;
 }
 
 
 .contacts-social-lists {
   display: inline-flex;
   flex-direction: row;
-  margin-top: 45vw;
+  margin-top: 38vw;
   margin-right: 35vw;
   transition-duration: 1s;
 }
@@ -174,8 +175,8 @@ sup {
 	transition-timing-function: cubic-bezier(0.8,0,0.2,1);
 }
 
-.global-menu__item.global-menu__item--navigation.is-opened .menu__item-name.home::before {
-	background: var(--color-home);
+.global-menu__item.global-menu__item--navigation.is-opened .menu__item-name.medias::before {
+	background: var(--color-medias);
 }
 .global-menu__item.global-menu__item--navigation.is-opened .menu__item-name.capabilities::before {
 	background: var(--color-capabilities);
@@ -611,11 +612,11 @@ a.demo--current {
 
 .shape-overlays {
 	width: 100vw;
-	height: 100vh;
+	height: 120vh;
 	pointer-events: none;
 	position: fixed;
-	top: 0;
-	left: 0;
+	top: -4vw;
+    left: -12vw;
 }
 
 .shape-overlays.is-opened {
@@ -673,18 +674,20 @@ a.demo--current {
 }
 
 .hamburger {
+	margin: 2vw;
 	width: 64px;
 	height: 64px;
 	display: block;
 	position: relative;
 	cursor: pointer;
-	position: absolute;
-	top: 2.25em;
-	right: 2.25em;
+	position: fixed;
+	top: -3vw;
+	right: -3.75em;
 	z-index: 110;
 	border-radius: 50%;
 	background-color: var(--button-bg);
 	pointer-events: auto;
+	transition-duration: 1s;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 

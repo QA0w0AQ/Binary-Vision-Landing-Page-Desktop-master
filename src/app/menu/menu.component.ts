@@ -74,9 +74,110 @@ export class MenuComponent implements OnInit {
     menu__item:any;
     x:any;
     c:any;
-
+    public view = ``;
+    projectView = `<div class="box">
+    <div class="box1">
+      <span>Looper</span><sup style="color:#FFD93E">New</sup><br>
+      <span>Arvin</span><sup>COMING SOON</sup><br>
+      <span>Giggl</span><sup>COMING SOON</sup><br>
+      <span>PritchArt</span><sup>COMING SOON</sup>
+    </div>
+    <div class="box2">
+      <span>Alpha Crypto</span><sup style="color:#03A6B4">New</sup><br>
+      <span>Iraqi Souq</span><sup>COMING SOON</sup><br>
+      <span>NextWave Girls</span><sup>COMING SOON</sup><br>
+      <span>Kenergy Active</span><sup>COMING SOON</sup>
+    </div>
+    <div class="box3">
+      <span>Rent Your Ride</span><sup style="color:#F08064">New</sup><br>
+      <span>Iungo Social</span><sup>COMING SOON</sup><br>
+      <span>Kenergy Ventures</span><sup>COMING SOON</sup><br>
+      <span>KenergyLabs</span><sup>COMING SOON</sup>
+    </div>
+    </div>`;
 
   constructor() { }
+  // projectView = `<div class="box" style="	display: flex;justify-content: space-between;">
+  // <div class="box1" style="		line-height: 5vw;
+  // font-size: 1.4vw;
+  // font-family: 'Montserrat', sans-serif;
+  // color: white;
+  // font-weight: bold;">
+  //   <span>Looper</span><sup style="color:#FFD93E">New</sup><br>
+  //   <span>Arvin</span><sup>COMING SOON</sup><br>
+  //   <span>Giggl</span><sup>COMING SOON</sup><br>
+  //   <span>PritchArt</span><sup>COMING SOON</sup>
+  // </div>
+  // <div class="box2" style="		line-height: 5vw;
+  // font-size: 1.4vw;
+  // font-family: 'Montserrat', sans-serif;
+  // color: white;
+  // font-weight: bold;">
+  //   <span>Alpha Crypto</span><sup style="color:#03A6B4">New</sup><br>
+  //   <span>Iraqi Souq</span><sup>COMING SOON</sup><br>
+  //   <span>NextWave Girls</span><sup>COMING SOON</sup><br>
+  //   <span>Kenergy Active</span><sup>COMING SOON</sup>
+  // </div>
+  // <div class="box3" style="		line-height: 5vw;
+  // font-size: 1.4vw;
+  // font-family: 'Montserrat', sans-serif;
+  // color: white;
+  // font-weight: bold;">
+  //   <span>Rent Your Ride</span><sup style="color:#F08064">New</sup><br>
+  //   <span>Iungo Social</span><sup>COMING SOON</sup><br>
+  //   <span>Kenergy Ventures</span><sup>COMING SOON</sup><br>
+  //   <span>KenergyLabs</span><sup>COMING SOON</sup>
+  // </div>
+  // </div>`;
+
+
+  showProject(){
+    this.content.innerHTML = this.projectView;
+    this.content.className = 'case-content animated fadeInLeft';
+  }
+  showCapabilities(){
+    this.content.innerHTML = this.view;
+  }
+
+  showTeam(){
+    this.content.innerHTML = this.view;
+  }
+
+  showMedia(){
+    this.content.innerHTML = this.view;
+  }
+
+  showConnect(){
+    this.content.innerHTML = this.view;
+  }
+
+  hamburger(){
+    if (this.isAnimating) {
+      return false;
+    }
+    this.toggle();
+    if (this.isOpened === true) {
+      this.elmHamburger.classList.add('is-opened-navi');
+      for (var i = 0; i < this.gNavItems.length; i++) {
+        this.gNavItems[i].classList.add('is-opened');
+      }
+      this.elmHamburger.setAttribute("style", "right: 102%;position:fixed")
+      this.contactlist.setAttribute("style", "opacity:1");
+      this.content.setAttribute("style", "opacity:1;");
+      this.logo.setAttribute("style", "opacity:1;");
+      this.menu__item.setAttribute("style", "opacity:1");
+    } else {
+      this.elmHamburger.classList.remove('is-opened-navi');
+      for (var i = 0; i < this.gNavItems.length; i++) {
+        this.gNavItems[i].classList.remove('is-opened');
+      }
+      this.elmHamburger.setAttribute("style", "right: -3.75em")
+      this.contactlist.setAttribute("style", "opacity:0");
+      this.logo.setAttribute("style", "opacity:0;");
+      this.content.innerHTML=``;
+    }
+  }
+
 
   ngOnInit() {
 
@@ -98,7 +199,7 @@ export class MenuComponent implements OnInit {
     this.menu__item = document.getElementById('global-menu__wrap');
     this.x = window.matchMedia("(max-width: 450px)")
     this.c  = document.getElementById('case-content');
-    // overShip = new ShapeOverlays(content);
+
 
 
     this.x.addListener((this.x)={
@@ -131,68 +232,8 @@ export class MenuComponent implements OnInit {
         } 
       }
     });
-
-
-    this.elmHamburger.addEventListener('click', () => {
-      if (this.isAnimating) {
-        return false;
-      }
-      this.toggle();
-      if (this.isOpened === true) {
-        this.elmHamburger.classList.add('is-opened-navi');
-        for (var i = 0; i < this.gNavItems.length; i++) {
-          this.gNavItems[i].classList.add('is-opened');
-        }
-        this.elmHamburger.setAttribute("style", "right: 102%;position:fixed")
-        this.contactlist.setAttribute("style", "opacity:1");
-        this.content.setAttribute("style", "opacity:1;");
-        this.logo.setAttribute("style", "opacity:1;");
-        this.menu__item.setAttribute("style", "opacity:1");
-      } else {
-        this.elmHamburger.classList.remove('is-opened-navi');
-        for (var i = 0; i < this.gNavItems.length; i++) {
-          this.gNavItems[i].classList.remove('is-opened');
-        }
-        this.elmHamburger.setAttribute("style", "right: -3.75em")
-        this.contactlist.setAttribute("style", "opacity:0");
-        this.logo.setAttribute("style", "opacity:0;");
-        this.content.setAttribute("style", "opacity:0;");
-        this.content.innerHTML=``;
-      }
-  
-    });
-    
-    this.projects.addEventListener('click', () => {
-      this.content.innerHTML = `<div class="box">
-      <div class="box1">
-        <span>Looper</span><sup style="color:#FFD93E">New</sup><br>
-        <span>Arvin</span><sup>COMING SOON</sup><br>
-        <span>Giggl</span><sup>COMING SOON</sup><br>
-        <span>PritchArt</span><sup>COMING SOON</sup>
-      </div>
-      <div class="box2">
-        <span>Alpha Crypto</span><sup style="color:#03A6B4">New</sup><br>
-        <span>Iraqi Souq</span><sup>COMING SOON</sup><br>
-        <span>NextWave Girls</span><sup>COMING SOON</sup><br>
-        <span>Kenergy Active</span><sup>COMING SOON</sup>
-      </div>
-      <div class="box3">
-        <span>Rent Your Ride</span><sup style="color:#F08064">New</sup><br>
-        <span>Iungo Social</span><sup>COMING SOON</sup><br>
-        <span>Kenergy Ventures</span><sup>COMING SOON</sup><br>
-        <span>KenergyLabs</span><sup>COMING SOON</sup>
-      </div>
-      </div>`
-  });
-  this.medias.addEventListener('click', () => {this.content.innerHTML=``});
-  this.capabilities.addEventListener('click', () => {this.content.innerHTML=``});
-  this.team.addEventListener('click', () => {this.content.innerHTML=``});
-  this.connect.addEventListener('click', () => {this.content.innerHTML=``});
-
     
   }
-
-
 
 
   toggle() {

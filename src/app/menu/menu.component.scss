@@ -1,3 +1,17 @@
+
+app-menu{
+	.box {
+		display: flex;
+		justify-content: space-between;
+		.box1, .box2, .box3 {
+			line-height: 5vw;
+			font-size: 1.4vw;
+			font-family: 'Montserrat', sans-serif;
+			color: white;
+			font-weight: bold;
+		}
+	}
+}
 *,
 *::after,
 *::before {

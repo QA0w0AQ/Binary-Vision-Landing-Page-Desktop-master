@@ -14,7 +14,7 @@
 	<body class="navigation">
 		<main class="main main--navigation">
 			<div class="content content--navigation">
-				<div class="hamburger hamburger--navigation js-hover">
+				<div class="hamburger hamburger--navigation js-hover"  (click)="hamburger()">
 					<div class="hamburger__line hamburger__line--01">
 						<div class="hamburger__line-in hamburger__line-in--01"></div>
 					</div>
@@ -35,7 +35,7 @@
 				
 				
 				<div class="global-menu">
-					<div class="case-content" id="case-content"></div>
+					<div class="case-content" id="case-content" [innerHTML]="view | html"></div>
 					<div class="contacts-social-lists" style="display:none" id="contacts-social-lists">
 								<ul class="social-list">
 										<li>
@@ -74,33 +74,33 @@
 					</div>
 					<div class="global-menu__wrap" id="global-menu__wrap">
 							<a class="global-menu__item global-menu__item--navigation" href="#">
-								<span class="menu__item-name capabilities">CAPABILITIES</span>
+								<span class="menu__item-name capabilities" (click)="showCapabilities()">CAPABILITIES</span>
 								<span class="menu__item-label">
 									A creative design &amp; digital agency specializing in UI/UX design.
 								</span>
 							</a>
 							<a class="global-menu__item global-menu__item--navigation" href="#">
-								<span class="menu__item-name projects"  id="menu__item-name_projects">PROJECTS</span>
+								<span class="menu__item-name projects"  id="menu__item-name_projects" (click)="showProject()">PROJECTS</span>
 								<span class="menu__item-label">
 									Creating relatable and unforgettable experiences, services, and
 									products is our mission. Your ideas are our reality.
 								</span>
 							</a>
 							<a class="global-menu__item global-menu__item--navigation" href="#">
-								<span class="menu__item-name team">TEAM</span>
+								<span class="menu__item-name team" (click)="showTeam()">TEAM</span>
 								<span class="menu__item-label">
 									A sneak peek of our most standoutworthy creations and cultivate
 									experiences. The final products from the long hours of hard word.
 								</span>
 							</a>
 							<a class="global-menu__item global-menu__item--navigation" href="#">
-								<span class="menu__item-name medias">MEDIA</span>
+								<span class="menu__item-name medias" (click)="showMedia()">MEDIA</span>
 								<span class="menu__item-label">
 									Describe your project and we'll get back to you within 24 hours.
 								</span>
 							</a>
 							<a class="global-menu__item global-menu__item--navigation" href="#">
-								<span class="menu__item-name connect">CONNECT</span>
+								<span class="menu__item-name connect" (click)="showConnect()">CONNECT</span>
 								<span class="menu__item-label">
 									Describe your project and we'll get back to you within 24 hours.
 								</span>

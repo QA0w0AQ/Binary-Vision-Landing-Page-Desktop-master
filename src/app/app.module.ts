@@ -12,6 +12,7 @@ import { BeteazeComponent } from './beteaze/beteaze.component';
 import { MainComponent } from './main/main.component';
 import { KoffeeRunComponent } from './koffee-run/koffee-run.component';
 import { MenuComponent } from './menu/menu.component';
+import { HtmlPipe } from './menu/innerhtmlpipe.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MenuComponent } from './menu/menu.component';
     BeteazeComponent,
     MainComponent,
     KoffeeRunComponent,
-    MenuComponent
+    MenuComponent,
+    HtmlPipe
   ],
   imports: [
     AppRoutingModule,

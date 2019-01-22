@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  styleUrls: ['./menu.component.scss'],
+  // encapsulation: ViewEncapsulation.None
 })
 export class MenuComponent implements OnInit {
     elm: any;
@@ -74,66 +75,59 @@ export class MenuComponent implements OnInit {
     menu__item:any;
     x:any;
     c:any;
+    projectSupStyle:any="vertical-align:super;font-weight:bold;font-size:0.7vw;margin-left:0.4vw";
+    projectBoxsStyle:any="line-height: 5vw;font-size: 1.4vw;font-family: 'Montserrat', sans-serif;color: white;font-weight: bold;"
+    projectBoxStyle:any="animation-name:showup;display: flex;transition-duration: 0.6s;justify-content: space-between;"
     public view = ``;
-    projectView = `<div class="box">
-    <div class="box1">
-      <span>Looper</span><sup style="color:#FFD93E">New</sup><br>
-      <span>Arvin</span><sup>COMING SOON</sup><br>
-      <span>Giggl</span><sup>COMING SOON</sup><br>
-      <span>PritchArt</span><sup>COMING SOON</sup>
+    projectView = `<div class="projectbox animated showup" style="${this.projectBoxStyle}">
+    <div class="box1" style="${this.projectBoxsStyle}">
+      <span>Looper</span><sup style="color:#FFD93E;${this.projectSupStyle}">New</sup><br>
+      <span>Arvin</span><sup style="color:#535fff;${this.projectSupStyle}">New</sup><br>
+      <span>Giggl</span><sup style="color:#00ffd2;${this.projectSupStyle}">New</sup><br>
+      <span>Vier</span><sup style="${this.projectSupStyle}">COMING SOON</sup>
     </div>
-    <div class="box2">
-      <span>Alpha Crypto</span><sup style="color:#03A6B4">New</sup><br>
-      <span>Iraqi Souq</span><sup>COMING SOON</sup><br>
-      <span>NextWave Girls</span><sup>COMING SOON</sup><br>
-      <span>Kenergy Active</span><sup>COMING SOON</sup>
+    <div class="box2" style="${this.projectBoxsStyle}">
+      <span>Alpha Crypto</span><sup style="color:#ff8b45;${this.projectSupStyle}">New</sup><br>
+      <span>Iraqi Souq</span><sup style="${this.projectSupStyle}">COMING SOON</sup><br>
+      <span>NextWave Girls</span><sup style="color:#ff4b63;${this.projectSupStyle}">New</sup><br>
+      <span>Kenergy Active</span><sup style="${this.projectSupStyle}">COMING SOON</sup>
     </div>
-    <div class="box3">
-      <span>Rent Your Ride</span><sup style="color:#F08064">New</sup><br>
-      <span>Iungo Social</span><sup>COMING SOON</sup><br>
-      <span>Kenergy Ventures</span><sup>COMING SOON</sup><br>
-      <span>KenergyLabs</span><sup>COMING SOON</sup>
+    <div class="box3" style="${this.projectBoxsStyle}">
+      <span>Rent Your Ride</span><sup style="color:#ff4b63;${this.projectSupStyle}">New</sup><br>
+      <span>Iungo Social</span><sup style="color:#ffe500;${this.projectSupStyle}">New</sup><br>
+      <span>Kenergy Ventures</span><sup style="${this.projectSupStyle}">COMING SOON</sup><br>
+      <span>KenergyLabs</span><sup style="${this.projectSupStyle}">COMING SOON</sup>
     </div>
     </div>`;
 
+    // projectView = `<div class="projectbox animated showup">
+    // <div class="box1">
+    //   <span>Looper</span><sup style="color:#FFD93E">New</sup><br>
+    //   <span>Arvin</span><sup>COMING SOON</sup><br>
+    //   <span>Giggl</span><sup>COMING SOON</sup><br>
+    //   <span>Vier</span><sup>COMING SOON</sup>
+    // </div>
+    // <div class="box2">
+    //   <span>Alpha Crypto</span><sup style="color:#03A6B4">New</sup><br>
+    //   <span>Iraqi Souq</span><sup>COMING SOON</sup><br>
+    //   <span>NextWave Girls</span><sup>COMING SOON</sup><br>
+    //   <span>Kenergy Active</span><sup>COMING SOON</sup>
+    // </div>
+    // <div class="box3">
+    //   <span>Rent Your Ride</span><sup style="color:#F08064">New</sup><br>
+    //   <span>Iungo Social</span><sup>COMING SOON</sup><br>
+    //   <span>Kenergy Ventures</span><sup>COMING SOON</sup><br>
+    //   <span>KenergyLabs</span><sup>COMING SOON</sup>
+    // </div>
+    // </div>`;
+
   constructor() { }
-  // projectView = `<div class="box" style="	display: flex;justify-content: space-between;">
-  // <div class="box1" style="		line-height: 5vw;
-  // font-size: 1.4vw;
-  // font-family: 'Montserrat', sans-serif;
-  // color: white;
-  // font-weight: bold;">
-  //   <span>Looper</span><sup style="color:#FFD93E">New</sup><br>
-  //   <span>Arvin</span><sup>COMING SOON</sup><br>
-  //   <span>Giggl</span><sup>COMING SOON</sup><br>
-  //   <span>PritchArt</span><sup>COMING SOON</sup>
-  // </div>
-  // <div class="box2" style="		line-height: 5vw;
-  // font-size: 1.4vw;
-  // font-family: 'Montserrat', sans-serif;
-  // color: white;
-  // font-weight: bold;">
-  //   <span>Alpha Crypto</span><sup style="color:#03A6B4">New</sup><br>
-  //   <span>Iraqi Souq</span><sup>COMING SOON</sup><br>
-  //   <span>NextWave Girls</span><sup>COMING SOON</sup><br>
-  //   <span>Kenergy Active</span><sup>COMING SOON</sup>
-  // </div>
-  // <div class="box3" style="		line-height: 5vw;
-  // font-size: 1.4vw;
-  // font-family: 'Montserrat', sans-serif;
-  // color: white;
-  // font-weight: bold;">
-  //   <span>Rent Your Ride</span><sup style="color:#F08064">New</sup><br>
-  //   <span>Iungo Social</span><sup>COMING SOON</sup><br>
-  //   <span>Kenergy Ventures</span><sup>COMING SOON</sup><br>
-  //   <span>KenergyLabs</span><sup>COMING SOON</sup>
-  // </div>
-  // </div>`;
+
 
 
   showProject(){
     this.content.innerHTML = this.projectView;
-    this.content.className = 'case-content animated fadeInLeft';
+    // this.content.className = 'case-content animated showup';
   }
   showCapabilities(){
     this.content.innerHTML = this.view;

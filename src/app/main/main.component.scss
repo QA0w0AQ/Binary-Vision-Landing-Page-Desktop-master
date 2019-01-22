@@ -972,22 +972,22 @@ main {
   z-index: 1;
   // display: none;
   &.background-introduce{
-    background: #FFD93E;
+    background: #ffe500;
     margin-top: -34vw;
     margin-left: auto;
   }
   &.background-project{
-    background: #242B71;
+    background: #ff8b45;
     margin-top: 15vw;;
     margin-left: -11vw;
   }
   &.background-capabilities{
-    background: #FE294D;
+    background: #ff4b63;
     margin-top: 0;
     margin-left: auto;
   }
   &.background-client{
-    background: #03A6B4;
+    background: #535fff;
     margin-top: 15vw;;
     margin-left: 0vw;
   }
@@ -1314,7 +1314,7 @@ main {
   right: 0;
   left: 0;
   padding: 0 11%;
-  background-color: #F08064;
+  background-color: #0E1529;
   height: 105vh;
   z-index: -1;
   .footer-content {
@@ -1327,7 +1327,7 @@ main {
       .footer-title-box {
         h1 {
           display: block;
-          color: #0E1529;
+          color: #e5ebef;
         }
         span {
           display: block;
@@ -1335,7 +1335,7 @@ main {
         }
         h2 {
           display: block;
-          color: #0E1529;
+          color: #e5ebef;
           margin-top: 0;
         }
       }

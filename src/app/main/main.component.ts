@@ -346,7 +346,7 @@ export class MainComponent implements OnInit {
             if (top >= caseStudiesSection && top <= caseStudiesSectionEnd) {
                 document.getElementById('logo-image').setAttribute('src', 'assets/images/logo_black.png');
             } else {
-                document.getElementById('logo-image').setAttribute('src', 'assets/images/logo.png');
+                document.getElementById('logo-image').setAttribute('src', 'assets/images/group-4.png');
             }
             if (top > caseStudiesSection) {
                 document.getElementById('out-of-thought-section').style.display = 'none';

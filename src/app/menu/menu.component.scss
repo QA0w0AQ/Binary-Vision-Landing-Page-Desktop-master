@@ -64,7 +64,7 @@ sup {
 .navigation {
 	--color-text: #fbd54a;
 	--color-bg: #333;
-	--color-link: #4d4f5f;
+	--color-link: #ffffff;
 	--color-link-hover: #bfb5b5;
 	--color-info: #fff;
 	--color-main-bg: #24262d;
@@ -208,6 +208,8 @@ sup {
 .global-menu__item.global-menu__item--navigation.is-opened .menu__item-label {
 	font-size: 0.30em;
 	margin-top: 0.5em;
+	font-weight: 300;
+	line-height: 1.2vw;
 	font-family: 'Poppins';
 	padding-bottom: 0.5em;
 	letter-spacing: 0.05em;
@@ -238,6 +240,8 @@ sup {
 .global-menu__item.global-menu__item--navigation .menu__item-label {
 	font-size: 0.30em;
 	margin-top: 0.5em;
+	font-weight: 300;
+	line-height: 1.2vw;
 	font-family: 'Poppins';
 	padding-bottom: 0.5em;
 	letter-spacing: 0.05em;

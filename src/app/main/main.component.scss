@@ -10,7 +10,7 @@
   margin-bottom: 0;
   display: none;
   animation-duration: 0.6s;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
   font-weight: 200;
 }
 
@@ -20,7 +20,7 @@
   color: #F7F6F3;
   display: none;
   animation-duration: 0.6s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
   font-weight: bold;
 }
 
@@ -31,8 +31,8 @@
   margin-bottom: 0;
   display: none;
   animation-duration: 0.6s;
-  font-family: 'Poppins', sans-serif;
-  font-weight: lighter;
+  font-family: 'Poppins';
+  font-weight: 200;
 }
 
 .footersubtitle {
@@ -40,8 +40,9 @@
   line-height: 4.8vw;
   color: #F7F6F3;
   display: none;
+  font-weight: 200;
   animation-duration: 0.6s;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
 }
 .scroll-box {
   position: absolute;
@@ -67,8 +68,8 @@
     }
   }
   span {
-    font-size: 1vw;
-    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-family: 'Poppins';
     line-height: 1.8vw;
     color: #F7F6F3;
   }
@@ -85,6 +86,7 @@ header {
   background-color: #0E1529;
   padding: 3.8% 11% 0 11%;
   .logo-nav-box {
+    height: 0vw;
     display: none;
     justify-content: space-between;
     position: fixed;
@@ -99,27 +101,6 @@ header {
         width: 19vw;
       }
     }
-    .menu-btn-wrapper {
-      position: absolute;
-      right: 0;
-      top: -4vw;
-      padding: 4.9% 2.2% 1.7% 2.2%;
-      background-color: #0E1529;
-      box-shadow: 0 40px 100px 0 rgba(0, 0, 0, 0.2);
-      .menu-btn {
-        height: 1.6vw;
-        width: 2.8vw;
-        cursor: pointer;
-      }
-    }
-  }
-  .main-header {
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-    right: 11%;
-    width: 40vw;
-    display: none;
   }
 
   .main-header-top {
@@ -161,7 +142,7 @@ header {
     text-align: center;
     p {
       color: #FFFFFF;
-      font-family: Poppins, sans-serif;
+      font-family: 'Poppins';
       font-size: 1.7vw;
       font-weight: 200;
       line-height: 2.4vw;
@@ -311,7 +292,7 @@ header {
         color: #fff;
         cursor: pointer;
         &:hover {
-          color: #75E2FF;
+          color: #fff;
         }
         .fa-facebook-f {
           font-size: 1.1vw;
@@ -340,23 +321,7 @@ main {
 /* TEAM SECTION */
 .team-section {
   margin-bottom: 14%;
-  // .team-info {
-  //   padding: 0 11% 0 11%;
-  //   height: 6.4vw;
-  //   div {
-  //     display: none;
-  //     justify-content: space-between;
-  //     animation-duration: 3s;
-  //     p {
-  //       font-size: 1.3vw;
-  //       line-height: 2.2vw;
-  //       font-weight: 300;
-  //       color: red;
-  //       margin: 0;
-  //       flex-basis: 43%;
-  //     }
-  //   }
-  // }
+  display: flex;
   .members-list {
     display: flex;
     overflow-x: scroll;
@@ -520,6 +485,7 @@ main {
 
 // clients-section
 .clients-section {
+  display: flex;
   .clients-list {
     display: flex;
     overflow-x: scroll;
@@ -999,7 +965,7 @@ main {
   text-align: justify;
   font-size: 2.3vw;
   animation-duration: 1.6s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
   font-weight: bold;
   &.binaryvision-introduce{
     padding-left: 14vw;
@@ -1008,7 +974,6 @@ main {
   &.binaryvision-project{
     padding-left: 25vw;
     padding-top: 10vw;
-    color: white;
   }
   &.binaryvision-capabilities{
     padding-left: 16vw;
@@ -1023,14 +988,6 @@ main {
   padding-right: 2vw;
 }
 .content.content-introduce{
-  // animation: textShow;
-  // @keyframes textShow {
-  //   from{opacity: 0;;}
-  //   to{opacity: 1;}
-  // }
-  // span {
-  //   transition-duration: 1s;
-  // }
   display: none;
   span:nth-of-type(1){
     animation: animatedFadeInUp 1s;
@@ -1076,7 +1033,7 @@ main {
 .content {
   font-size: 1.2vw;
   text-align: justify;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
   animation-delay: 0.5s;
   animation-duration: 1s;
   transition-duration: 0.6s;
@@ -1087,7 +1044,7 @@ main {
     &.connectwithUs{
       cursor: pointer;
       float: right;
-      font-size: 12pt;
+      font-size: 18px;
       font-weight: bold;
       &:hover{
         font-size: 1.2vw;
@@ -1100,11 +1057,11 @@ main {
     margin-left: 39vw;
     padding-top: 1vw;
     margin-right: 14vw;
-    color: white;
+    color: #0e1529;
     &.learnMore{
       cursor: pointer;
       float: right;
-      font-size: 12pt;
+      font-size: 18px;
       font-weight: bold;
       &:hover{
         font-size: 1.2vw;
@@ -1119,7 +1076,7 @@ main {
     &.learnMore{
       cursor: pointer;
       float: right;
-      font-size: 12pt;
+      font-size: 18px;
       font-weight: bold;
       &:hover{
         font-size: 1.2vw;
@@ -1134,7 +1091,7 @@ main {
     &.learnMore{
       cursor: pointer;
       float: right;
-      font-size: 12pt;
+      font-size: 18px;
       font-weight: bold;
       &:hover{
         font-size: 1.2vw;
@@ -1331,7 +1288,8 @@ main {
         }
         span {
           display: block;
-          font-weight: 100;
+          font-weight: 200;
+          color: #e5ebef;
         }
         h2 {
           display: block;
@@ -1388,7 +1346,7 @@ main {
             color: #fff;
             cursor: pointer;
             &:hover {
-              color: #0E1529;
+              color: #fff;
             }
           }
           li {
@@ -1443,9 +1401,9 @@ main {
       }
       span {
         font-size: 1.3vw;
-        font-weight: 400;
+        font-weight: 200;
         letter-spacing: 0.05vw;
-        color: #0E1529;
+        color: #ffffff;
       }
       textarea,
       input {
